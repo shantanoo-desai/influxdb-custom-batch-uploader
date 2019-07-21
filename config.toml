@@ -1,0 +1,23 @@
+[local]
+# Local Instance of InfluxDB
+host = 'localhost'
+port = 8086
+database = 'CISS'
+
+[cloud]
+# Server Instance of InfluxDB
+endpoint = 'Your.Cloud.Instance'
+port = 8086
+secure = true
+username = 'username'
+password = 'password'
+database = 'cissCloud'
+
+[CISS]
+# QUERY: SELECT <fields of interest> FROM <measurement_name> WHERE <flag_field>=0 and <tag> LIMIT <number>
+fields = ['accX', 'accY', 'accZ', 'gyroX', 'gyroY', 'gyroZ', 'magX', 'magY', 'magZ']
+measurement = 'ciss'
+limit = 10
+    [CISS.tags]
+    node = 'CISS1'
+
