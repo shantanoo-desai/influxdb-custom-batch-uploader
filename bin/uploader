@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+
+import uploader
+
+if __name__ == "__main__":
+    uploader.main()
